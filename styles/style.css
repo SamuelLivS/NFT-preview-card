@@ -1,0 +1,153 @@
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-main: hsl(217, 54%, 11%);
+    --Very-dark-blue-card: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.8rem;
+    background: var(--Very-dark-blue-main);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    color: var(--Soft-blue);
+}
+
+a {
+    text-decoration: none;
+}
+
+/*Main*/
+main {
+    min-height: 96vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/*Card*/
+#card {
+    max-width: 340px;
+    padding: 25px;
+    background: var(--Very-dark-blue-card);
+    border-radius: 15px;
+    box-shadow: 5px 5px 20px 5px rgba(0, 0, 0, 0.219);
+}
+
+#div-img-main {
+    width: 100%;
+    height: 285px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#img-main {
+    width: 100%;
+}
+
+#div-img-main::after {
+    content: url('/images/icon-view.svg');
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 255, 247, .5);
+}
+
+#div-img-main:hover::after{
+    display: flex;
+}
+
+#card h1 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.links {
+    color: var(--White);
+    transition: .2s;
+}
+
+.links:hover {
+    color: var(--Cyan);
+}
+
+.text {
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+
+.organization {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    position: relative;
+}
+
+.line {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: var(--Very-dark-blue-line);
+}
+
+.sub-organization {
+    display: flex;
+    align-items: center;
+}
+
+.sub-organization img {
+    margin-right: 10px;
+}
+
+#quantity-eth {
+    color: var(--Cyan);
+}
+
+.div-attribution {
+    display: flex;
+    align-items: center;
+}
+
+#img-avatar {
+    width: 35px;
+    border: solid 1px white;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+/*Footer*/
+footer {
+    font-size: 11px;
+    text-align: center;
+}
+
+footer a {
+    color: hsl(228, 45%, 44%);
+    transition: .2s;
+}
+footer a:hover {
+    color: var(--Cyan);
+}
